@@ -1,6 +1,6 @@
 pandas
 streamlit>=1.31.1
-altair<5
+altair
 matplotlib
 seaborn
 plotly
@@ -8,5 +8,5 @@ groq
 python-dotenv
 openpyxl
 kaleido==0.1.0post1
-numpy
+numpy==1.26.4
 scipy
