@@ -11,8 +11,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-
 env_key = os.getenv("GROQ_API_KEY", "")
 secret_key = st.secrets.get("GROQ_API_KEY", "") if hasattr(st, "secrets") else ""
 
@@ -24,6 +22,7 @@ if env_key:
 if secret_key:
     st.write("SECRET prefix:", secret_key[:8], "suffix:", secret_key[-4:])
 
+GROQ_API_KEY = secret_key or env_key
 
 
 
