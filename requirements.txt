@@ -1,5 +1,6 @@
 pandas
-streamlit
+streamlit>=1.31.1
+altair<5
 matplotlib
 seaborn
 plotly
@@ -9,4 +10,3 @@ openpyxl
 kaleido
 numpy
 scipy
-altair
