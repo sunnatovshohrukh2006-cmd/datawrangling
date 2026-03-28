@@ -7,6 +7,6 @@ plotly
 groq
 python-dotenv
 openpyxl
-kaleido==0.1.0.post1
+kaleido==1.2.0
 numpy==1.26.4
 scipy
