@@ -11,7 +11,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-GROQ_API_KEY = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY", "")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
+# Support for Streamlit Cloud Secrets
+if not GROQ_API_KEY and "GROQ_API_KEY" in st.secrets:
+    GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
 MODEL_ID = "llama-3.3-70b-versatile"
 
