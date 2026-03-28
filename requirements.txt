@@ -9,3 +9,4 @@ openpyxl
 kaleido
 numpy
 scipy
+altair
