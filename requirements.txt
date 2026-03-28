@@ -1,0 +1,11 @@
+pandas
+streamlit
+matplotlib
+seaborn
+plotly
+groq
+python-dotenv
+openpyxl
+kaleido
+numpy
+scipy
