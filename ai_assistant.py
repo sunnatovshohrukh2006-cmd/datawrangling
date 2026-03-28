@@ -11,10 +11,21 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-# Support for Streamlit Cloud Secrets
-if not GROQ_API_KEY and "GROQ_API_KEY" in st.secrets:
-    GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+
+
+env_key = os.getenv("GROQ_API_KEY", "")
+secret_key = st.secrets.get("GROQ_API_KEY", "") if hasattr(st, "secrets") else ""
+
+st.write("ENV key found:", bool(env_key), "len:", len(env_key))
+st.write("SECRET key found:", bool(secret_key), "len:", len(secret_key))
+
+if env_key:
+    st.write("ENV prefix:", env_key[:8], "suffix:", env_key[-4:])
+if secret_key:
+    st.write("SECRET prefix:", secret_key[:8], "suffix:", secret_key[-4:])
+
+
+
 
 MODEL_ID = "llama-3.3-70b-versatile"
 
